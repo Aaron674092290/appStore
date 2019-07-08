@@ -1,0 +1,125 @@
+.scrollBody{
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch; // 优化移动端滑动体验
+    header{
+        text-align: center;
+        background: rgba(249,249,249,.95);
+        font-size: .28rem;
+        padding:.15rem .2rem;
+        position: fixed;
+        z-index:1;
+        width: 100%;
+        .search{
+            font-size: .28rem;
+            padding:.16rem 0;
+            background-color: rgba(228,229,230,.95);;
+            border-radius: .08rem;
+            color:#999;
+            width: 100%;
+            text-align: center;
+        }
+        .cancelIcon{
+            width: 0.3rem;
+            position: absolute;
+            right:.4rem;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .searchIcon{
+            width: 0.3rem;
+            position: absolute;
+            top:50%;
+            left:calc(~'50% - .5rem');
+            transform: translate(-50%,-50%);
+        }
+    }
+    .x-scrollView{
+        padding:1.2rem 0 0 .3rem;
+        .recomend{
+            font-size: .34rem;
+            font-weight: bold;
+            margin-bottom: .3rem;
+        }
+        .scrollCont{
+            white-space: nowrap;
+            overflow-x:scroll;
+            overflow-y: hidden;
+            .scrollItem{
+                font-size: .24rem;
+                display: inline-block;
+                width:26%;
+                text-align: center;
+                &:last-child{
+                    margin-right: .2rem;
+                }
+                .appImg{
+                    border-radius: .3rem;
+                    width: 1.5rem;
+                }
+                .appName{
+                    padding:0 .15rem;
+                    text-align: left;
+                    height:.7rem;
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient: vertical;
+                }
+                .appType{color:#999;text-align: left;padding-left: .15rem;}
+            }
+        }
+    }
+    .y-scrollView{
+        padding-left:.4rem;
+        font-size: .24rem;
+        .scrollItem{
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex;
+            font-size: .26rem;
+            align-items: center;
+            padding:.2rem 0;
+            .index{
+                width: .7rem;
+                text-align: left;
+                font-size: .32rem;
+                color:#999;
+            }
+            .oddImg{
+                border-radius: .3rem;
+                width: 1.06rem;
+                height: 1.06rem;
+            }
+            .evenImg{
+                border-radius: 50%;
+                width: 1.06rem;
+                height: 1.06rem;
+            }
+            .appDec{
+                padding-left: .2rem;
+                width: 72%;
+                .appName{
+                    line-height: 1.6;
+                    overflow: hidden;    
+                    text-overflow: ellipsis;      //超出部分以省略号显示
+                    white-space: nowrap;
+                }
+                
+                .appType{color:#999;}
+            }
+        }
+    }
+    .nomore{
+        text-align: center;
+        color:#999;
+        font-size: .24rem;
+        height:1rem;
+        line-height: 1rem;
+    }
+}
